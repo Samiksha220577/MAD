@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OffersFragment">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Header Section -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/offers_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exclusive Offers"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <!-- Offer Banner Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/offer_banner"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/offer_banner" />
+
+    </LinearLayout>
+
+    <!-- Offer List Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/offer_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp" />
+
+    <!-- Offer Categories Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/category_healthcare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Healthcare"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/category_wellness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wellness"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/category_lifestyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lifestyle"
+            android:backgroundTint="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <array name="filter_options">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <!-- Add more options as needed -->
+    </array>
+
+    <array name="sort_options">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <!-- Add more options as needed -->
+    </array>
+</resources>
